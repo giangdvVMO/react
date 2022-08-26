@@ -1,0 +1,26 @@
+.question-container {
+    width: 350px;
+}
+
+.disclosure {
+    width: 100%;
+    margin: 0px 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: aliceblue;
+}
+
+.question-header {
+    line-height: 30px;
+    width: 90%;
+    color: rgb(205, 118, 255);
+    margin: 10px 10px;
+    background-color: rgb(253, 227, 249);
+    border-radius: 10px;
+    border-width: 1px;
+}
+
+.question-header:hover {
+    cursor: pointer;
+}
