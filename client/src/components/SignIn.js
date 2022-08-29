@@ -1,6 +1,7 @@
 import { InfoCircleOutlined, UserOutlined, EyeInvisibleOutlined, EyeTwoTone, KeyOutlined } from '@ant-design/icons';
 import { Button, Cascader, Checkbox, Form, Image, Input, Select, Tooltip, Typography } from 'antd';
 import React, { useRef, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import '../styles/input.css';
 
 const SignIn = () => {
@@ -46,9 +47,11 @@ const SignIn = () => {
         }
     }
 
+    const navigate = useNavigate();
     function handleSubmit(e) {
         console.log("submit");
         ref.current.submit();
+        navigate("/");
     }
     return (
         <div className='grid-container'>
@@ -112,8 +115,12 @@ const SignIn = () => {
                         >
                         </Select>
                     </Form.Item>
-                    <Form.Item name="remember" valuePropName="checked">
+                    <Form.Item name="remember">
                         <Checkbox>Remember me</Checkbox>
+                        <Link to='/forgot-password'>Quên mật khẩu</Link>
+                    </Form.Item>
+                    <Form.Item name="register">
+                        Bạn chưa có tài khoản? <Link to='/register'>Đăng ký</Link>
                     </Form.Item>
                     <Form.Item>
                         <Button type='submit' ref={refButtonSubmit} name='button-submit' className='button submit' onSubmit={handleSubmit} onClick={handleSubmit} onKeyUp={handleKeyUp}>Submit</Button>
