@@ -13,6 +13,7 @@ import News from './components/News';
 import Cart from './components/CartInfor';
 import SignIn from './components/SignIn';
 import PageNotFound from './components/PageNotFound';
+import Profile from './components/Profile';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -24,7 +25,7 @@ root.render(
         <Routes>
           <Route path='/signIn' element={<SignIn />} />
           <Route path="/" element={<App />} >
-            <Route path="cart" element={<Cart />} />
+            <Route path="profile" element={<Profile />} />
             <Route path="news" element={<News />} />
           </Route>
           <Route path="*" element={<PageNotFound />} />

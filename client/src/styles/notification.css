@@ -1,3 +1,64 @@
-.bell {
-    margin-top: 10px;
+.notification-container {
+    margin: 10px 15px;
+    position: relative;
+    z-index: 99;
+
+}
+
+.bell-avatar {
+    color: rgb(0, 52, 59);
+    background-color: rgb(129, 230, 255);
+}
+
+.box-container-hover {
+    display: none;
+    padding: 10px;
+    position: absolute;
+    min-width: 200px;
+    max-width: 500px;
+}
+
+.sub-notification-container {
+    position: absolute;
+    border-radius: 10px;
+    box-shadow: 0 0 10 3px;
+    margin-left: -100px;
+    min-width: 200px;
+    max-width: 500px;
+    background-color: white;
+    padding: 10px
+}
+
+.notification-container:hover .box-container-hover {
+    display: block;
+}
+
+.sub-notification-container-item {
+    display: flex;
+    border-bottom: 2px;
+    padding: 5px;
+}
+
+.noti-item-avatar {
+    margin-right: 5px;
+    color: rgb(0, 52, 59);
+    font-weight: 700;
+    background-color: rgb(129, 230, 255);
+    /* flex-grow: 1; */
+}
+
+.content-notification-container {
+    /* flex-grow: 10; */
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.content-noti {
+    font-weight: 400;
+}
+
+.time-noti {
+    font-size: 10px;
+    color: rgb(151, 151, 151);
 }
